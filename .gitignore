@@ -1,0 +1,52 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+next-env.d.ts
+
+# Environment files and secrets (PAT lives here during the capture script)
+.env
+.env.*
+!.env.example
+
+# Test and tooling output
+coverage/
+playwright-report/
+test-results/
+blob-report/
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Host and tooling folders
+.vercel/
+.wrangler/
+.turbo/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Demo data pipeline: raw captures and the real-to-pseudonym mapping must never be committed
+scripts/capture-output/
+scripts/pseudonym-map.json
+
+# Private notes and local-only AI files
+private/
+*-private.md
+*.private.md
+context.private.md
+.claude/settings.local.json
