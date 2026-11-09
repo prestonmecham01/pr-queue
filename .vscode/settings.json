@@ -1,0 +1,10 @@
+{
+  // VS Code's built-in CSS checker doesn't know Tailwind CSS v4 directives and
+  // reports "Unknown at rule @theme" in src/app/globals.css. Tailwind handles
+  // @theme at build time, so the warning is a false positive.
+  // Rather than turning off css.lint.unknownAtRules (which would hide real
+  // typos), we register only the Tailwind directives we use. When you start
+  // using another one (@utility, @custom-variant, @source, @plugin, @apply),
+  // add it to css-custom-data.json.
+  "css.customData": ["./css-custom-data.json"]
+}
