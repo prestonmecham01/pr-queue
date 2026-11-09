@@ -1,0 +1,15 @@
+{
+  "version": 1.1,
+  "atDirectives": [
+    {
+      "name": "@theme",
+      "description": "Tailwind CSS v4 directive: defines design tokens that generate utility classes. Registered here so VS Code's CSS checker doesn't flag it as an unknown at-rule (see .vscode/settings.json).",
+      "references": [
+        {
+          "name": "Tailwind CSS: Theme variables",
+          "url": "https://tailwindcss.com/docs/theme"
+        }
+      ]
+    }
+  ]
+}
