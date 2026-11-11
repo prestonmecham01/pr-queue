@@ -2,11 +2,16 @@
   "name": "pr-queue",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=26 <27"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "type-check": "next typegen && tsc --noEmit"
   },
   "dependencies": {
@@ -16,13 +21,19 @@
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "4.3.3",
-    "@types/node": "^20",
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@types/node": "^26.6.6",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^6.3.0",
     "eslint": "^9",
     "eslint-config-next": "16.4.6",
     "eslint-plugin-jsx-a11y": "^6.10.2",
+    "jsdom": "^31.0.0",
     "tailwindcss": "4.3.3",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^5.1.0"
   }
 }
