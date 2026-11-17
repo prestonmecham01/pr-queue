@@ -1,7 +1,10 @@
 name: CI
 
 on:
+  # Only push-triggered on main; branches get CI through their pull request,
+  # otherwise every commit on a PR branch runs twice.
   push:
+    branches: [main]
   pull_request:
 
 # Read-only token for every job.
@@ -15,8 +18,22 @@ concurrency:
 
 jobs:
   check:
+    name: ${{ matrix.name }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    strategy:
+      # Let every check finish even if another one fails.
+      fail-fast: false
+      matrix:
+        include:
+          - name: Lint
+            command: npm run lint
+          - name: Type-check
+            command: npm run type-check
+          - name: Test
+            command: npm run test
+          - name: Build
+            command: npm run build
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -33,12 +50,22 @@ jobs:
           npm --version
 
       - run: npm ci
-      - run: npm run lint
-      - run: npm run type-check
-      - run: npm run test
-      - run: npm run build
+      - run: ${{ matrix.command }}
 
-      # Advisory only: shows findings in the log but never fails the run.
+  # Advisory only: shows findings in the log but never fails the run.
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
       - name: Audit production dependencies
         run: npm audit --audit-level=high --omit=dev
         continue-on-error: true
