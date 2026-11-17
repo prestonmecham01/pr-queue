@@ -45,6 +45,7 @@ scripts/capture-output/
 scripts/pseudonym-map.json
 
 # Private notes and local-only AI files
+CLAUDE.local.md
 private/
 *-private.md
 *.private.md

@@ -4,7 +4,7 @@ Client-side PR triage dashboard that ranks pull requests by what needs attention
 
 > **Status: work in progress (Sprint 0 of 6).** Everything below is planned, not yet built. This README grows as decisions are made and features ship.
 
-**Live demo:** coming after the first deploy.
+**Live demo:** https://pr-queue.vercel.app/
 
 ## What it will do (planned)
 
