@@ -8,8 +8,7 @@
 
 ## Review notes
 
-<!-- Optional. Anything a reviewer should know: trade-offs, what was tested, what was not.
-If AI feedback influenced this change, label it "local, manual review" and say what changed because of it. -->
+<!-- Optional. Anything a reviewer should know: trade-offs, what was tested, what was not. -->
 
 ## Checks
 
