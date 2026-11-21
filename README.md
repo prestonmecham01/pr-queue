@@ -2,7 +2,7 @@
 
 Client-side PR triage dashboard that ranks pull requests by what needs attention first, and shows why. Next.js static export, AG-Grid, GitHub GraphQL, IndexedDB. No backend, and a demo mode with no login.
 
-> **Status: work in progress (Sprint 0 of 6).** Everything below is planned, not yet built. This README grows as decisions are made and features ship.
+> **Status: work in progress (Sprint 1 of 6).** 
 
 **Live demo:** https://pr-queue.vercel.app/
 
