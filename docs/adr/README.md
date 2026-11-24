@@ -33,7 +33,7 @@ Numbers, measurements, test results, links to docs. Write "none yet" if there is
 Known weaknesses, and what would make me revisit this.
 ```
 
-If AI feedback influenced the decision, add a line under Why: "Informed by a local, manual review (persona name, date)." Decisions and numbers must be the author's own and verified.
+Decisions and numbers must be the author's own and verified.
 
 ## Index
 
