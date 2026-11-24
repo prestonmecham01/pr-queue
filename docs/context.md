@@ -23,3 +23,5 @@ recorded as an ADR.
 | [0001](adr/0001-ci-parallel-jobs-and-triggers.md) | CI runs parallel check jobs; triggers limited to PRs and main | Accepted |
 | [0002](adr/0002-vercel-hosting.md) | Host the static export on Vercel | Accepted |
 | [0003](adr/0003-pat-auth.md) | Fine-grained read-only PAT held in memory for GitHub auth | Accepted |
+| [0004](adr/0004-ai-assisted-coding.md) | AI-Assisted Coding Disclosure | Accepted |
+| [0005](adr/0005-demo-repo.md) | Demo data source: rails/rails, full capture at 25 per page | Accepted |
