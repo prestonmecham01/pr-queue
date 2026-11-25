@@ -63,3 +63,14 @@ Run lint, type-check, and tests before saying a task is done.
 ## Commits
 
 Imperative, one change each, for example `docs: add README stub`. Mention the ADR when a commit implements one.
+
+## Commits and PR titles
+
+Format: `type: verb description`
+
+- Types: feat, fix, docs, chore, ci, test, refactor
+- Verbs: add, update, remove, fix, rename, configure
+- Example: `ci: configure branch protection checks`
+
+Every change goes through a PR and is squash-merged, so the PR title becomes the commit message.
+Branch names look like `feat/short-name`. Use `Closes #N` in the PR body.

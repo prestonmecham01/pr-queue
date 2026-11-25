@@ -43,6 +43,8 @@ Thumbs.db
 # Demo data pipeline: raw captures and the real-to-pseudonym mapping must never be committed
 scripts/capture-output/
 scripts/pseudonym-map.json
+pull-requests-raw.json
+metadata.json
 
 # Private notes and local-only AI files
 CLAUDE.local.md
